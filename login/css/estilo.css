@@ -1,0 +1,209 @@
+:root{
+	--color4:#B48948  ;
+	--color2:#050606;
+	--color3:#B5D5C8;
+	--color1:#C07B11;
+	--error:#CA3315;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+body{
+	background-image: url(../img/teclado.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+
+.contenedor{
+	width: 30%;
+	height: auto;
+	border-radius: 14px ;
+	background-color: rgba(0,0,0,0.9);
+	overflow: hidden;
+	box-shadow: 10px 0 15px 1px black;
+
+}
+.contenedor-opciones{
+	display: flex;
+}
+
+.contenedor-opciones .btn-opciones{
+	width: 50%;
+	font-size: 18px;
+	font-weight: 300;
+	padding: 3% 0;
+	background-color: var(--color4);
+	color:#fff;
+	border:0;
+	outline: none;
+	cursor: pointer;
+}
+.active{
+	background-color: rgba(0,0,0,0.9) !important;
+	color:var(--color4) !important;
+}
+.contenedor-formularios{
+	margin: auto;
+	width: 90%;
+	padding: 0;
+	padding-bottom: 15px;
+	
+}
+.formulario{
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	box-sizing: border-box;
+
+	/*display: flex;
+	align-items:center;
+	flex-direction: column;
+	background-color: red;
+	width: 90%;
+	/*margin: auto;*/
+}
+
+.formulario h1{
+	color: var(--color1);
+	text-align: center;
+	margin: 20px 0;
+}
+/*contenedor input*/
+
+.formulario .input-container{
+	
+	position: relative;
+
+	margin-bottom: 15px ;
+}
+
+/*contenedor input*/
+
+/*iconos input*/
+.formulario .input-container i{
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-width: 30px;
+	width: 45px;
+	text-align: center;
+	background-color: var(--color1);
+	color:#fff !important;
+	padding:12px 4px;
+	border-radius: 10px 0px 0px 10px;
+
+}
+/*fin iconos input*/
+
+/*input*/
+.formulario .input-container .input{
+	width: 100%;
+	border:.5px solid var(--color1);
+	border-radius: 10px;
+	padding:12px;
+	outline: none;
+	box-sizing: border-box;
+	transition: 0.3s;
+	padding-left: 50px;
+}
+.formulario .input-container .error-input{
+	width: 100%;
+	border:1px solid var(--error);
+	border-radius: 10px;
+	padding:11.5px;
+	outline: none;
+	box-sizing: border-box;
+	transition: 0.3s;
+	padding-left: 50px;
+	box-shadow:  0 0 11px 2px var(--error);
+}
+
+.formulario .input-container .input:focus{
+	border-color:var(--color4)    ;
+	box-shadow: 0 0 4px 0 var(--color4)  ;
+}
+
+.formulario .input-container .input:focus+i{
+	background-color: var(--color4)  ;
+}
+
+
+.formulario .input-container .input:focus+i, .input:active+i{
+	color:var(--color4)   ;
+}
+.formulario .input-container .error-input+i{
+	background-color:var(--error);
+}
+
+/*fin input*/
+
+/**botones*/
+.formulario .btn{
+	display: flex;
+	justify-content: flex-end;
+}
+.formulario .btn input{
+	background: var(--color1);
+	font-size: 16px;
+	padding: 2.5% 0;
+	width: 100%;
+	border:0;
+	border-radius: 14px;
+	cursor: pointer;
+	color:#fff;
+	outline: none;
+	font-weight: 900;
+}
+.formulario .btn input:hover{
+
+	
+	color:#fff;
+	}
+/**fin botones*/
+
+.desaparecer{
+	display: none;
+}
+
+.error{
+	color: red;
+	font-style: oblique;
+	font-size: 15px;
+	font-weight: 600;
+	margin-left: 50px;
+	padding: 0;
+	display: none;
+}
+.mensaje{
+	margin-top: 2%;
+	color: white;
+
+	font-weight: bold;
+	padding: 1%;
+	text-align: center;
+
+	background-color: red;
+}
+.exitosa{
+	margin-top: 2%;
+	color: black;
+
+	font-weight: bold;
+	padding: 1%;
+	text-align: center;
+
+	background-color: #29D59C;
+
+}
